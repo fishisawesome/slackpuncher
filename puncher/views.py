@@ -59,12 +59,12 @@ def json(request):
 
 				elif commands[0] == 'in':
 
-					#response['response_type'] = "in_channel"
+					response['response_type'] = "in_channel"
 					response['text'] = "You've successfully punched in, {}".format(request.POST.get('user_name','brah'))
 
 				elif commands[0] == 'out':
 					
-					#response['response_type'] = "in_channel"
+					response['response_type'] = "in_channel"
 					response['text'] = "Til next time, {}".format(request.POST.get('user_name','brah'))
 
 				else:
