@@ -4,12 +4,14 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.utils import timezone, formats
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Punch
 
 def index(request):
 	return render(request,'punch/index.html')
 
+@csrf_exempt
 def json(request):
 
 	response = {}
